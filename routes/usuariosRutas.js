@@ -8,12 +8,12 @@ ruta.get("/", async (req, res) => {
     const usuariobd = new UsuarioDB()
     var usuarios = await usuariobd.mostrarUsuarios();
     var usuariosCorrectos=[];
-    usuarios.forEach(usuario =>{
+   /* usuarios.forEach(usuario =>{
         const usuario1 = new UsuarioClase(usuario);
         if(usuario1.nombre!=undefined && usuario1.celular!=undefined && usuario1.correo!=undefined){
             usuariosCorrectos.push(usuario1.obtenerDatos);
         }
-    });
+    });*/
     res.render("mostrarUsuarios", {usuariosCorrectos});
 });
 
