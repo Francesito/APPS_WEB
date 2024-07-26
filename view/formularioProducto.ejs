@@ -1,0 +1,29 @@
+<%- include("templates/header") %>
+<h1>Registro de productos</h1>
+<div class="contenedor">
+    <form action="/agregarProducto" method="post" id="formulario">
+        <label for="nombre">Nombre del producto: </label> <span class="errorNombre ocultar">Nombre no válido</span>
+        <input class="" autofocus name="nombre" id="nombre" type="text" placeholder="Nombre del producto" /><span></span>
+        <i class="fa-solid fa-xmark ocultar xmarkErrorNombre correctoInput"></i>
+        <i class="fa-solid fa-check checkMarkNombre ocultar"></i>
+
+        <label for="descripcion">Descripcion: </label><span class="ocultar errorCelular">descripcion no valido</span>
+        <input name="descripcion" id="descripcion" type="text" placeholder="descripcion">
+        <i class="ocultar xmarkErrorCelular fa-regular fa-circle-xmark"></i>
+        <i class="ocultar checkMarkCelular fa-regular fa-circle-check"></i>
+
+        <label for="precio">Precio: </label> <span class="errorPrecio ocultar">Precio no válido</span>
+        <input name="precio" id="precio" type="text" placeholder="Precio del producto"><span></span>
+        <i class="fa-solid ocultar fa-xmark xmarkErrorPrecio correctoInput"></i>
+        <i class="fa-solid fa-check checkMarkPrecio ocultar"></i>
+
+        <label for="stock">Stock: </label> <span class="errorStock ocultar">Stock no válido</span>
+        <input name="stock" id="stock" type="text" placeholder="Cantidad en stock"><span></span>
+        <i class="fa-solid ocultar fa-xmark xmarkErrorStock correctoInput"></i>
+        <i class="fa-solid fa-check checkMarkStock ocultar"></i>
+
+        <button type="submit">Guardar datos</button>
+    </form>
+</div>
+
+<%- include("templates/footer") %>

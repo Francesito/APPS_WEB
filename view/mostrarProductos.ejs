@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos de la tienda</title>
+    <link rel="stylesheet" href="http://localhost:3012/css/estilosTabla.css">
+</head>
+<body>
+    <h1>Productos de la tienda</h1>
+    <div class="contenedor">
+        <!-- Botones para agregar productos, agregar usuarios y ver usuarios -->
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                    <th>Editar / Borrar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% productosCorrectos.forEach((producto) => { %>
+                    <tr>
+                        <td><%= producto.id %></td>
+                        <td><%= producto.nombre %></td>
+                        <td><%= producto.descripcion %></td>
+                        <td><%= producto.precio %></td>
+                        <td><%= producto.stock %></td>
+                        <td>
+                            <a href="/editarProducto/<%= producto.id %>">Editar / </a>
+                            <a href="/borrarProducto/<%= producto.id %>">Borrar</a>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        <div class="buttons">
+            <a href="/agregarProducto" class="btn">Agregar Producto</a>
+            <a href="/agregarUsuario" class="btn">Agregar Usuario</a>
+            <a href="/" class="btn">Ver Usuarios</a>
+        </div>
+    </div>
+</body>
+</html>

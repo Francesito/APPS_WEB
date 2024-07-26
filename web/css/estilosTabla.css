@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #e0e0e0; /* Un color de fondo suave para el cuerpo */
+}
+
+table {
+    border: 2px solid #a0a0a0; /* Borde gris metálico */
+    width: 80%;
+    border-collapse: collapse; 
+    margin: 20px auto; /* Centrar la tabla */
+    background: linear-gradient(145deg, #f0f0f0, #c0c0c0); /* Degradado metálico */
+    box-shadow: 5px 5px 10px #999999, -5px -5px 10px #ffffff; /* Sombra para efecto 3D */
+}
+
+/*th {
+    background: linear-gradient(145deg, #87ceeb, #1e90ff); 
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #a0a0a0; 
+    box-shadow: inset 2px 2px 5px #888888; 
+}*/
+
+td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #a0a0a0; /* Borde gris metálico */
+    background: #e0e0e0; /* Fondo gris claro */
+    box-shadow: inset 2px 2px 5px #888888; /* Sombra interior para efecto 3D */
+}
+
+tr:nth-child(odd) {
+    background-color: #f7f7f7; /* Fondo gris muy claro para filas impares */
+}
+
+.description {
+    width: 40%;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+h1 {
+    margin: 20px;
+    color: #1e90ff; /* Color del título acorde con el degradado */
+}
+
+/* Estilo para los botones */
+.buttons {
+    margin: 20px;
+}
+
+.btn {
+    transition: all 0.3s ease;
+    margin:20px;
+    border:2px solid black;
+    padding:5px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: calc(100% - 40px); 
+}
